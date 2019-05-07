@@ -25,7 +25,6 @@ public:
 
 protected:
     void updateChartsValues() override;
-    void keyPressEvent(QKeyEvent * event);
 };
 
 #endif // MEMORYAVERAGEUSAGE_H

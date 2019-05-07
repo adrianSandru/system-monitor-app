@@ -34,19 +34,3 @@ void MemoryAverageUsageWidget::updateChartsValues()
         fChart->scroll(fChart->plotArea().width() / MAX_RANGE,0);
     }
 }
-
-void MemoryAverageUsageWidget::keyPressEvent(QKeyEvent *event)
-{
-    qDebug("print key event");
-    if(event->key() == Qt::Key_Left)
-    {
-        QChart * fChart = chartView().chart();
-        fChart->scroll(-10,0);
-        qDebug("print key event");
-    }
-    if(event->key() == Qt::Key_Right)
-    {
-        QChart * fChart = chartView().chart();
-        fChart->scroll(10,0);
-    }
-}
