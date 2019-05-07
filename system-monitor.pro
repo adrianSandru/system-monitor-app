@@ -32,7 +32,8 @@ SOURCES += \
     cpuaveragewidget.cpp \
     cpuusermodewidget.cpp \
     cpukernelmodewidget.cpp \
-    cpuidlemodewidget.cpp
+    cpuidlemodewidget.cpp \
+    memoryaverageusagewidget.cpp
 
 
 HEADERS += \
@@ -43,7 +44,8 @@ HEADERS += \
     cpuaveragewidget.h \
     cpuusermodewidget.h \
     cpukernelmodewidget.h \
-    cpuidlemodewidget.h
+    cpuidlemodewidget.h \
+    memoryaverageusagewidget.h
 
 linux {
     SOURCES += systemlinuxinfoimpl.cpp

@@ -6,6 +6,7 @@
 #include "cpuusermodewidget.h"
 #include "cpukernelmodewidget.h"
 #include "cpuidlemodewidget.h"
+#include "memoryaverageusagewidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,10 +23,11 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    SysInfoWidget *mCpuWidget;
-    SysInfoWidget *mCpuUserModeWidget;
-    SysInfoWidget *mCpuKernelModeWidget;
-    SysInfoWidget *mCpuIdleModeWidget;
+    SysInfoWidget * mCpuWidget;
+    SysInfoWidget * mCpuUserModeWidget;
+    SysInfoWidget * mCpuKernelModeWidget;
+    SysInfoWidget * mCpuIdleModeWidget;
+    SysInfoWidget * mAverageMemoryUsage;
 };
 
 #endif // MAINWINDOW_H

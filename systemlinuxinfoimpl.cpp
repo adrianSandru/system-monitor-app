@@ -122,6 +122,6 @@ double SystemLinuxInfoImpl::memoryUsage()
     quint64 fFreeMemory = fSystemInfo.freeram + fSystemInfo.freeswap;
     quint64 fTotalMemoryUsed = (fTotalMemory - fFreeMemory) * fSystemInfo.mem_unit;
 
-    double fValueInPercent = (double) fTotalMemoryUsed / (double) fTotalMemory * 100.0;
+    double fValueInPercent = ((double) fTotalMemoryUsed / (double) fTotalMemory) * 100.0;
     return qBound(0.0, fValueInPercent, 100.0);
 }
