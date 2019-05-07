@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "cpuwidget.h"
+#include "cpuaveragewidget.h"
+#include "cpuusermodewidget.h"
+#include "cpukernelmodewidget.h"
+#include "cpuidlemodewidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,7 +21,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    CpuWidget mCpuWidget;
+
+    SysInfoWidget *mCpuWidget;
+    SysInfoWidget *mCpuUserModeWidget;
+    SysInfoWidget *mCpuKernelModeWidget;
+    SysInfoWidget *mCpuIdleModeWidget;
 };
 
 #endif // MAINWINDOW_H

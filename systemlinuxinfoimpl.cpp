@@ -88,25 +88,26 @@ double SystemLinuxInfoImpl::getCpuValues(CPU_STATS cpuStats)
 
 double SystemLinuxInfoImpl::cpuLoad()
 {
-    return qBound(0.0, getCpuValues(IDLE_MODE), 100.0);
+    qDebug("cpuLoad Average called");
+    return qBound(0.0, getCpuValues(AVERAGE), 100.0);
 }
 
 double SystemLinuxInfoImpl::cpuLoadInUserMode()
 {
-    double fValueInPercent = getCpuValues(CPU_STATS::USER_MODE) / getCpuValues(CPU_STATS::AVERAGE) * 100.0;
-    return qBound(0.0, fValueInPercent, 100.0);
+    qDebug("cpuLoad user mode called");
+    return qBound(0.0, getCpuValues(USER_MODE), 100.0);
 }
 
 double SystemLinuxInfoImpl::cpuLoadInKernelMode()
 {
-    double fValueInPercent = getCpuValues(CPU_STATS::KERNEL_MODE) / getCpuValues(CPU_STATS::AVERAGE) * 100.0;
-    return qBound(0.0, fValueInPercent, 100.0);
+    qDebug("cpuLoad kernel mode called");
+    return qBound(0.0, getCpuValues(KERNEL_MODE), 100.0);
 }
 
 double SystemLinuxInfoImpl::cpuLoadIdleMode()
 {
-    double fValueInPercent = getCpuValues(CPU_STATS::IDLE_MODE) / getCpuValues(CPU_STATS::AVERAGE) * 100.0;
-    return qBound(0.0, fValueInPercent, 100.0);
+    qDebug("cpuLoad idle mode called");
+    return qBound(0.0, getCpuValues(IDLE_MODE), 100.0);
 }
 
 double SystemLinuxInfoImpl::memoryUsage()

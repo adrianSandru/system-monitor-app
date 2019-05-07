@@ -1,23 +1,21 @@
-#include "cpuwidget.h"
+#include "cpukernelmodewidget.h"
 #include "systeminformation.h"
 
 using namespace QtCharts;
 
-CpuWidget::CpuWidget(QWidget *parent) : SysInfoWidget(parent)
+CpuKernelModeWidget::CpuKernelModeWidget(QWidget *parent) : SysInfoWidget(parent,300,700)
 {
     mSeriesValues = new QPieSeries(this);
     mSeriesValues->setHoleSize(0.35);
-    mSeriesValues->append("cpu load", 30);
-    mSeriesValues->append("cpu free", 70);
 
     QChart * fChart = chartView().chart();
     fChart->addSeries(mSeriesValues);
-    fChart->setTitle("cpu load");
+    fChart->setTitle("Cpu Kernel Load Graph");
 }
 
-void CpuWidget::updateChartsValues()
+void CpuKernelModeWidget::updateChartsValues()
 {
-    double cpuValue = SystemInformation::instance().cpuLoad();
+    double cpuValue = SystemInformation::instance().cpuLoadInKernelMode();
     mSeriesValues->clear();
     mSeriesValues->append("load ", cpuValue);
     mSeriesValues->append("free", 100.0-cpuValue);

@@ -29,7 +29,10 @@ SOURCES += \
     systeminformation.cpp \
     systemwindowsinfoimpl.cpp \
     sysinfowidget.cpp \
-    cpuwidget.cpp
+    cpuaveragewidget.cpp \
+    cpuusermodewidget.cpp \
+    cpukernelmodewidget.cpp \
+    cpuidlemodewidget.cpp
 
 
 HEADERS += \
@@ -37,7 +40,10 @@ HEADERS += \
     systeminformation.h \
     systemwindowsinfoimpl.h \
     sysinfowidget.h \
-    cpuwidget.h
+    cpuaveragewidget.h \
+    cpuusermodewidget.h \
+    cpukernelmodewidget.h \
+    cpuidlemodewidget.h
 
 linux {
     SOURCES += systemlinuxinfoimpl.cpp

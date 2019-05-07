@@ -1,20 +1,20 @@
-#ifndef CPUWIDGET_H
-#define CPUWIDGET_H
+#ifndef CPUKERNELMODEWIDGET_H
+#define CPUKERNELMODEWIDGET_H
 
 #include <QtCharts/QPieSeries>
 #include "sysinfowidget.h"
 
-class CpuWidget : public SysInfoWidget
+class CpuKernelModeWidget : public SysInfoWidget
 {
 private:
     QtCharts::QPieSeries * mSeriesValues;
 
     Q_OBJECT
 public:
-    explicit CpuWidget(QWidget * parent = 0);
+    explicit CpuKernelModeWidget(QWidget * parent = 0);
 
 protected slots:
     void updateChartsValues() override;
 };
 
-#endif // CPUWIDGET_H
+#endif // CPUKERNELMODEWIDGET_H
