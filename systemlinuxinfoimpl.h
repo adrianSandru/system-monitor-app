@@ -40,9 +40,9 @@ public:
     void initialize() override;
     double cpuLoad() override;
     double memoryUsage() override;
-    virtual double cpuLoadInKernelMode() override;
-    virtual double cpuLoadInUserMode() override;
-    virtual double cpuLoadIdleMode() override;
+    double cpuLoadInKernelMode() override;
+    double cpuLoadInUserMode() override;
+    double cpuLoadIdleMode() override;
 };
 
 #endif // SYSTEMLINUXINFOIMPL_H

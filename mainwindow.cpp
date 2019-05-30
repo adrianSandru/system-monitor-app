@@ -3,6 +3,7 @@
 #include "systeminformation.h"
 
 #include <QGridLayout>
+#include <QBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent) :
     layout->addWidget(mCpuKernelModeWidget,1,0);
     layout->addWidget(mCpuIdleModeWidget,1,1);
     layout->addWidget(mAverageMemoryUsage,2,0);
-    //ui->centralWidget->layout()->addWidget(&mCpuWidget);
 }
 
 MainWindow::~MainWindow()
